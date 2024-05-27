@@ -1,0 +1,37 @@
+<div class="header" id="header">
+  <div class="logo">
+    <img src="assets/logo.png" alt="Logo">
+  </div>
+  <div class="search-bar">
+    <input type="text" placeholder="Buscar..." class="search-input">
+    <button class="logout">Logout</button>
+  </div>
+</div>
+
+<div class="hero">
+  <img src="assets/imagCarrucel1.jpg" alt="Portada">
+  <div class="overlay">
+    <h1>Artec</h1>
+    <p>Busca lo mejor del arte en un solo lugar</p>
+  </div>
+</div>
+
+<div class="content">
+  <h1>{{ title }}</h1>
+  <!-- <p>Buscar un evento acorde a tus necesidades.</p> -->
+
+  <div class="filter-section">
+    <label for="city-filter">Filtrar por ciudad:</label>
+    <select id="city-filter" class="city-filter" (change)="onFilterChange($event)">
+      <option value="todos">Todos</option>
+      <option value="quito">Quito</option>
+      <option value="guayaquil">Guayaquil</option>
+      <option value="cuenca">Cuenca</option>
+    </select>
+  </div>
+
+  <div class="search-events">
+    <input type="text" placeholder="Busca tu evento aquí..." class="event-search-input">
+    <button class="search-button">Buscar</button>
+  </div>
+</div>
