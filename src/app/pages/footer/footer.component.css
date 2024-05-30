@@ -1,0 +1,12 @@
+.bg-black {
+  background-color: #4b0082;
+  color: #ffffff;
+  margin: auto;
+}
+
+.footer-logo {
+  max-width: 60px;
+  margin-left: 20px;
+  margin-top: 15px;
+  /* Ajusta el tamaño del logo según sea necesario */
+}
