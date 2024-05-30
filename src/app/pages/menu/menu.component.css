@@ -1,0 +1,84 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #4b0082;
+  /* Morado */
+  color: white;
+  z-index: 1000;
+  transition: background-color 0.5s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 75px;
+  /* Ajusta según el tamaño del logo */
+  margin-right: 10px;
+}
+
+.page-name {
+  font-size: 24px;
+  /* Tamaño de letra para el nombre de la página */
+  font-weight: bold;
+  color: white;
+}
+
+.auth-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.auth-link {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  /* Tamaño de letra más pequeño */
+  transition: color 0.3s;
+}
+
+.auth-link:hover {
+  color: #ccc;
+  /* Un tono más claro para el hover */
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 0;
+  background-color: #4b0082;
+  /* Morado */
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #ccc;
+  /* Un tono más claro para el hover */
+}
+
+/* Clase para hacer el header transparente */
+.header.transparent {
+  background-color: rgba(75, 0, 130, 0.9);
+  /* Morado con transparencia */
+}

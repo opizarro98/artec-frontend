@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component,HostListener } from '@angular/core';
+import { Component } from '@angular/core';
 
 interface Event {
   image: string;
@@ -21,59 +21,59 @@ export class MainComponent {
 
       events: Event[] = [
     { 
-      image: 'assets/event1.jpg', 
-      title: 'Evento 1', 
-      date: 'Mayo 9, 2024', 
-      location: 'Quito - MicroTeatro UIO', 
+      image: 'assets/EventosCuenca/Afiche-promocional-1.png', 
+      title: 'Ecuentro de Mascaras', 
+      date: 'Mayo 31, 2024', 
+      location: 'Cuenca - Parque Calderon', 
+      description: 'Circuito tecnico y conversatorio' 
+    },
+    { 
+      image: 'assets/EventosCuenca/Afiche-promocional-2.png', 
+      title: 'RugFestival', 
+      date: 'Jun 29, 2024', 
+      location: 'Cuenca - Teatro casa de la cultura', 
+      description: '6 bandas en escena, no te lo pierdas.' 
+    },
+    { 
+      image: 'assets/EventosCuenca/Afiche-promocional-3.png', 
+      title: 'Tres reyes sabios', 
+      date: 'Julio 9, 2024', 
+      location: 'Cuenca - Sala Alfoncso Carrasco', 
+      description: 'Obrade teatro' 
+    },
+    { 
+     image: 'assets/EventosGuayaquil/Afiche-promocional-1.png', 
+      title: 'Cantinflas', 
+      date: 'Jun 10, 2024', 
+      location: 'Guayaquil - Teatro Centro de Arte', 
+      description: 'Monologo familiar.' 
+    },
+    { 
+      image: 'assets/EventosGuayaquil/Afiche-promocional-2.png', 
+      title: 'Chimoltrufia', 
+      date: 'Jul 9, 2024', 
+      location: 'Guayaquil - MicroTeatro UIO', 
       description: 'Descripción del evento 1.' 
     },
     { 
-      image: 'assets/event2.jpg', 
-      title: 'Evento 2', 
+      image: 'assets/EventosGuayaquil/Afiche-promocional-3.png',  
+      title: 'La india Maria', 
       date: 'Mayo 10, 2024', 
       location: 'Guayaquil - Teatro Centro de Arte', 
       description: 'Descripción del evento 2.' 
     },
     { 
-      image: 'assets/event1.jpg', 
-      title: 'Evento 1', 
+      image: 'assets/EventosQuito/Afiche-promocional-1.png', 
+      title: 'Latino America', 
       date: 'Mayo 9, 2024', 
       location: 'Quito - MicroTeatro UIO', 
       description: 'Descripción del evento 1.' 
     },
     { 
-      image: 'assets/event2.jpg', 
-      title: 'Evento 2', 
+      image: 'assets/EventosQuito/Afiche-promocional-3.png', 
+      title: 'Callate Isabel', 
       date: 'Mayo 10, 2024', 
-      location: 'Guayaquil - Teatro Centro de Arte', 
-      description: 'Descripción del evento 2.' 
-    },
-    { 
-      image: 'assets/event1.jpg', 
-      title: 'Evento 1', 
-      date: 'Mayo 9, 2024', 
-      location: 'Quito - MicroTeatro UIO', 
-      description: 'Descripción del evento 1.' 
-    },
-    { 
-      image: 'assets/event2.jpg', 
-      title: 'Evento 2', 
-      date: 'Mayo 10, 2024', 
-      location: 'Guayaquil - Teatro Centro de Arte', 
-      description: 'Descripción del evento 2.' 
-    },
-    { 
-      image: 'assets/event1.jpg', 
-      title: 'Evento 1', 
-      date: 'Mayo 9, 2024', 
-      location: 'Quito - MicroTeatro UIO', 
-      description: 'Descripción del evento 1.' 
-    },
-    { 
-      image: 'assets/event2.jpg', 
-      title: 'Evento 2', 
-      date: 'Mayo 10, 2024', 
-      location: 'Guayaquil - Teatro Centro de Arte', 
+      location: 'Quito - Teatro Centro de Arte', 
       description: 'Descripción del evento 2.' 
     },
     
@@ -82,17 +82,6 @@ export class MainComponent {
   currentPage = 1;
   eventsPerPage = 12;
 
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    const header = document.getElementById('header');
-    if (header) {
-      if (window.pageYOffset > 50) {
-        header.classList.add('transparent');
-      } else {
-        header.classList.remove('transparent');
-      }
-    }
-  }
 
   onFilterChange(event: any) {
     const selectedCity = event.target.value;
