@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 .header {
   position: fixed;
   top: 0;
@@ -10,6 +12,7 @@
   transition: background-color 0.5s ease;
   display: flex;
   flex-direction: column;
+  font-family: "Rubik", sans-serif;
 }
 
 .top-bar {
@@ -40,14 +43,18 @@
 .auth-links {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
+  padding-right: 30px;
 }
 
 .auth-link {
   color: white;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 16px;
   /* Tamaño de letra más pequeño */
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-style: normal;
   transition: color 0.3s;
 }
 
@@ -59,8 +66,8 @@
 .menu {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  padding: 10px 0;
+  gap: 30px;
+  padding: 15px 0;
   background-color: #4b0082;
   /* Morado */
 }
@@ -68,12 +75,13 @@
 .menu a {
   color: white;
   text-decoration: none;
-  font-size: 18px;
-  transition: color 0.3s;
+  font-size: 20px;
+  transition: color 0.5s;
+  font-weight: 500;
 }
 
 .menu a:hover {
-  color: #ccc;
+  color: #786a81;
   /* Un tono más claro para el hover */
 }
 

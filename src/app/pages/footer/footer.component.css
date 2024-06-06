@@ -1,12 +1,62 @@
-.bg-black {
-  background-color: #4b0082;
-  color: #ffffff;
-  margin: auto;
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+.site-footer {
+  background-color: #1a1a1a;
+  /* Fondo oscuro */
+  color: white;
+  font-family: "Rubik", sans-serif;
 }
 
-.footer-logo {
-  max-width: 60px;
-  margin-left: 20px;
-  margin-top: 15px;
-  /* Ajusta el tamaño del logo según sea necesario */
+.top-footer {
+  padding: 20px 0;
+}
+
+.top-footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-footer .row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-footer {
+  list-style: none;
+  margin: 0 0 10px;
+}
+
+.list-footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.list-footer a:hover {
+  text-decoration: underline;
+}
+
+.main-footer {
+  padding: 10px 0;
+  border-top: 1px solid #333;
+}
+
+.main-footer .row-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-footer a {
+  font-size: 25px;
+  color: white;
+  padding-right: 15px;
+}
+
+.main-footer a:hover {
+  color: #ccc;
+}
+
+.copyright-text {
+  text-align: center;
+  font-size: 14px;
 }

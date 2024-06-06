@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 interface Event {
   image: string;
@@ -12,7 +13,7 @@ interface Event {
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,RouterLink,RouterOutlet,],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css'
 })

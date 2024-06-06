@@ -1,9 +1,16 @@
 import { Component, HostListener } from '@angular/core';
-
+import {MainComponent} from '../main/main.component';
+import {LoginComponent} from '../login/login.component';
+import {Routes, RouterOutlet, RouterLink} from '@angular/router';
+import {RegistroComponent} from '../registro/registro.component';
+import {NosotrosComponent} from '../nosotros/nosotros.component';
+import {PromocionateComponent} from '../promocionate/promocionate.component';
+import {CommonModule} from '@angular/common';
+import {FooterComponent} from '../footer/footer.component';
 @Component({
   selector: 'app-menu',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, RouterLink,RouterOutlet, MainComponent, FooterComponent, MenuComponent, LoginComponent],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.css'
 })
