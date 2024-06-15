@@ -1,44 +1,59 @@
 <div class="container">
     <div class="screen">
         <div class="screen__content">
-            <form class="login">
+            <form class="login" (ngSubmit)="register()" #registerForm="ngForm">
                 <h3 class="login_tittle">Registro ARTEC</h3>
                 <div class="login__row">
                     <div class="login__field">
                         <i class="login__icon fas fa-user"></i>
-                        <input type="text" class="login__input" placeholder="Nombre">
+                        <input type="text" class="login__input" placeholder="Nombre" [(ngModel)]="person.name"
+                            name="name" required>
                     </div>
                     <div class="login__field">
+                        <i class="login__icon fas fa-user"></i>
+                        <input type="text" class="login__input" placeholder="Apellido" [(ngModel)]="person.lastName"
+                            name="lastName" required>
+                    </div>
+                </div>
+                <div class="login__row">
+                    <div class="login__field">
                         <i class="login__icon fas fa-map-marker-alt"></i>
-                        <input type="text" class="login__input" placeholder="Dirección">
+                        <input type="text" class="login__input" placeholder="Dirección" [(ngModel)]="person.address"
+                            name="address" required>
                     </div>
                 </div>
                 <div class="login__row">
                     <div class="login__field">
                         <i class="login__icon fas fa-envelope"></i>
-                        <input type="email" class="login__input" placeholder="Correo">
+                        <input type="text" class="login__input" placeholder="identificacion" [(ngModel)]="person.identifier"
+                            name="identifier" required>
                     </div>
                     <div class="login__field">
                         <i class="login__icon fas fa-phone"></i>
-                        <input type="tel" class="login__input" placeholder="Teléfono">
+                        <input type="tel" class="login__input" placeholder="Teléfono" [(ngModel)]="person.phoneNumber"
+                            name="phoneNumber" required>
                     </div>
                 </div>
                 <div class="login__row">
                     <div class="login__field">
                         <i class="login__icon fas fa-user"></i>
-                        <input type="text" class="login__input" placeholder="Usuario">
+                        <input type="text" class="login__input" placeholder="Usuario" [(ngModel)]="person.userName"
+                            name="userName" required>
                     </div>
                     <div class="login__field">
                         <i class="login__icon fas fa-lock"></i>
-                        <input type="password" class="login__input" placeholder="Contraseña">
+                        <input type="password" class="login__input" placeholder="Contraseña"
+                            [(ngModel)]="person.password" name="password" required>
                     </div>
                 </div>
-                <button class="button login__submit">
+                <button class="button login__submit" type="submit">
                     <span class="button__text">Registrarse</span>
                     <i class="button__icon fas fa-chevron-right"></i>
                 </button>
             </form>
-           
+            <div *ngIf="errorMessage" class="error">
+                {{ errorMessage }}
+            </div>
         </div>
         <div class="screen__background">
             <span class="screen__background__shape screen__background__shape4"></span>

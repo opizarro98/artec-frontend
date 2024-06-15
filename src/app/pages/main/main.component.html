@@ -1,47 +1,64 @@
-
-
 <div class="hero">
-  <img src="assets/imagCarrucel2.png" alt="Portada">
+  <img src="assets/portada.jpeg" alt="Portada">
   <div class="overlay">
-    <h1>Artec</h1>
-    <p>Busca lo mejor del arte en un solo lugar</p>
+    <h1 class="display-1">Artec</h1>
+    <p class="lead">Busca lo mejor del arte en un solo lugar</p>
   </div>
 </div>
 
-<div class="content">
-  <h1>{{ title }}</h1>
-  <p>Buscar un evento acorde a tus necesidades.</p>
+<div class="container">
+  <h1 class="display-4">{{ title }}</h1>
+  <p class="lead">Buscar un evento acorde a tus necesidades.</p>
 
-  <div class="filter-section">
+  <div class="form-group">
     <label for="city-filter">Filtrar por ciudad:</label>
-    <select id="city-filter" class="city-filter">
+    <select id="city-filter" class="form-control">
       <option value="quito">Quito</option>
       <option value="guayaquil">Guayaquil</option>
       <option value="cuenca">Cuenca</option>
     </select>
   </div>
 
-  <div class="search-events">
-    <input type="text" placeholder="Busca tu evento aquí..." class="event-search-input">
-    <button class="search-button">Buscar</button>
-  </div>
-
-  <div class="events-container">
-    <div class="event" *ngFor="let event of events">
-      <img [src]="event.image" alt="Event Image">
-      <h2>{{ event.title }}</h2>
-      <p>{{ event.date }}</p>
-      <p>{{ event.location }}</p>
-      <p class="description">{{ event.description }}</p>
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Busca tu evento aquí..." aria-label="Buscar evento"
+      aria-describedby="button-addon2">
+    <div class="input-group-append">
+      <button class="btn btn-primary" type="button" id="button-addon2">Buscar</button>
     </div>
   </div>
 
-  <div class="pagination">
-    <button (click)="prevPage()" [disabled]="currentPage === 1">Anterior</button>
-    <button *ngFor="let page of [].constructor(totalPages); let i = index" (click)="setPage(i + 1)"
-      [class.active]="currentPage === (i + 1)">
-      {{ i + 1 }}
-    </button>
-    <button (click)="nextPage()" [disabled]="currentPage === totalPages">Siguiente</button>
+  <div class="row">
+    <div class="col-md-3" *ngFor="let event of events">
+      <div class="card mb-4 shadow-sm">
+        <img [src]="event.image" class="card-img-top" alt="Event Image">
+        <div class="card-body">
+          <h2 class="card-title">{{ event.title }}</h2>
+          <p class="card-text">{{ event.date }}</p>
+          <p class="card-text">{{ event.location }}</p>
+          <p class="card-text text-muted">{{ event.description }}</p>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <nav aria-label="Pagination">
+    <ul class="pagination justify-content-center">
+      <li class="page-item" (click)="prevPage()" [class.disabled]="currentPage === 1">
+        <a class="page-link" href="#" aria-label="Anterior">
+          <span aria-hidden="true">&laquo;</span>
+          <span class="sr-only">Anterior</span>
+        </a>
+      </li>
+      <li class="page-item" *ngFor="let page of [].constructor(totalPages); let i = index" (click)="setPage(i + 1)"
+        [class.active]="currentPage === (i + 1)">
+        <a class="page-link" href="#">{{ i + 1 }}</a>
+      </li>
+      <li class="page-item" (click)="nextPage()" [class.disabled]="currentPage === totalPages">
+        <a class="page-link" href="#" aria-label="Siguiente">
+          <span aria-hidden="true">&raquo;</span>
+          <span class="sr-only">Siguiente</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
 </div>
